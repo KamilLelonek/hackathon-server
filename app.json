@@ -1,0 +1,7 @@
+{
+  "name": "Rails hackathon seed",
+  "description": "A general-purpose universal hackathon server seed.",
+  "repository": "https://github.com/KamilLelonek/hackathon-server",
+  "logo": "http://dominicana.gob.do/images/Hackathon-logo-1.jpg",
+  "keywords": ["rails", "hackathon", "seed"]
+}

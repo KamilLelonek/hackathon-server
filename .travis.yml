@@ -1,0 +1,23 @@
+sudo: false
+language: ruby
+rvm:
+  - 2.2.3
+deploy:
+  provider: heroku
+  api_key:
+    secure: HEROKU_APP_TOKEN
+  app: HEROKU_APP_NAME
+  on:
+    repo: GITHUB_USER/GITHUB_REPO
+notifications:
+  slack:
+    rooms:
+      secure: SLACK_KEY
+cache: bundler
+script: bundle exec rspec spec
+services:
+  - postgresql
+addons:
+  postgresql: 9.3
+before_script:
+  - psql -c 'create database DATABASE_TEST_NAME;' -U postgres

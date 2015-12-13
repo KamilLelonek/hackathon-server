@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+heroku pg:reset DATABASE --confirm bh-2015-finals-server
+heroku run rake db:migrate
